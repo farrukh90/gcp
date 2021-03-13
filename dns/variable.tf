@@ -1,7 +1,7 @@
 variable "config" {
 	type = map(any)
 	default = {
-		project = "ckad-302703"
+		project = "iaacfarrukh"
 		dns_record = "wordpress"
 		dns_name = "acirrustech.org."
 		rrdatas = "127.0.0.1"
