@@ -53,7 +53,7 @@ resource "google_bigquery_table" "sheet" {
     }
 
     source_uris = [
-      "https://docs.google.com/spreadsheets/d/1ujH5lS_oH2Wa3fGK-ieUgx7Hpqj4VUZ4OVJzVwxfvYo/edit?usp=sharing",
+      "https://docs.google.com/spreadsheets/d/1sSXPgWFmSgiPnAab6Gvk4kkWA0q5woUVIMhVKmtJHwE/edit?usp=sharing",
     ]
   }
 }
