@@ -43,6 +43,7 @@ EOF
 
 resource "google_bigquery_table" "sheet" {
   dataset_id = google_bigquery_dataset.default.dataset_id
+  deletion_protection = false
   table_id   = "sheet"
 
   external_data_configuration {
