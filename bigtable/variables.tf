@@ -1,8 +1,10 @@
 variable "config" {
   type = map(any)
   default = {
-    project      = "cache-307814"
-    region       = "us-central1"
+    project = "cache-307814"
+    region  = "us-central1"
+    zone    = "us-central1-c"
+
     # friendly_name  = "test"
     # location     = "EU"
     # source_format = "GOOGLE_SHEETS"
