@@ -8,7 +8,12 @@
                 "firstname":
                 {
                     "stringValue":"farrukh"
+                },
+                "lastname":
+                {
+                    "stringValue":"farrukh"
                 }
+                
             }
         }
     }
