@@ -6,6 +6,7 @@ resource "google_sql_database" "database" {
 resource "google_sql_database_instance" "instance" {
   name   = var.config["name"]
   region =  var.config["region"]
+  database_version = var.config["database_version"]
   settings {
     tier = var.config["tier"]
   }

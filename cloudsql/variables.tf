@@ -6,5 +6,6 @@ variable "config" {
   		region = "us-central1"
 		tier = "db-f1-micro"
 		deletion_protection  = "true"
+		database_version = "MYSQL_5_6"
 	}
 }
