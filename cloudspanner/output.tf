@@ -1,10 +1,6 @@
-# output config {
-#   value       = [
-#     google_sql_database_instance.instance.name,
-#     google_sql_database_instance.instance.connection_name,
-#     google_sql_database_instance.instance.first_ip_address,
-#     google_sql_database_instance.instance.public_ip_address,
-#     google_sql_database_instance.instance.self_link
-
-#   ]
-# }
+output "config" {
+  value = [
+    google_spanner_instance.main.id,
+    google_spanner_instance.main.state
+  ]
+}
