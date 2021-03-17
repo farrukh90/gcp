@@ -22,8 +22,6 @@ resource "google_bigquery_table" "sheet" {
       skip_leading_rows = 1
     }
 
-    source_uris = [
-      "https://docs.google.com/spreadsheets/d/1sSXPgWFmSgiPnAab6Gvk4kkWA0q5woUVIMhVKmtJHwE/edit?usp=sharing",
-    ]
+    source_uris = [ var.config["source_uris"] ]
   }
 }
