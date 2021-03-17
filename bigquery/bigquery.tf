@@ -1,8 +1,8 @@
 resource "google_bigquery_dataset" "default" {
-  dataset_id                  = "foo"
-  friendly_name               = "test"
+  dataset_id                  = var.config["dataset_id"]
+  friendly_name               = var.config["friendly_name"]
   description                 = "This is a test description"
-  location                    = "EU"
+  location                    =  var.config["source_format"]
   default_table_expiration_ms = 3600000
 
   labels = {
@@ -16,12 +16,10 @@ resource "google_bigquery_table" "sheet" {
 
   external_data_configuration {
     autodetect    = true
-    source_format = "GOOGLE_SHEETS"
-
+    source_format = var.config["source_format"]
     google_sheets_options {
       skip_leading_rows = 1
     }
-
     source_uris = [ var.config["source_uris"] ]
   }
 }
