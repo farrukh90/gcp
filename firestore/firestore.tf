@@ -4,17 +4,17 @@ resource "google_firestore_index" "index" {
   collection = "chatrooms"
 
   fields {
-    field_path = "name"
+    field_path = "Firstname"
     order      = "ASCENDING"
   }
 
   fields {
-    field_path = "description"
+    field_path = "Lastname"
     order      = "DESCENDING"
   }
 
   fields {
-    field_path = "__name__"
+    field_path = "Phone"
     order      = "DESCENDING"
   }
 }
