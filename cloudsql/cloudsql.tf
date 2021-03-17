@@ -11,11 +11,5 @@ resource "google_sql_database_instance" "instance" {
     tier = var.config["tier"]
   }
   deletion_protection  = var.config["deletion_protection"]
-  network_interface {
-    network = "default"
-
-    access_config {
-      // Ephemeral IP
-    }
-  }
+  
 }
