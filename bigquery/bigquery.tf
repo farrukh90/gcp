@@ -53,7 +53,7 @@ resource "google_bigquery_table" "sheet" {
     }
 
     source_uris = [
-      "https://docs.google.com/spreadsheets/d/123456789012345",
+      "https://go.microsoft.com/fwlink/?LinkID=521962",
     ]
   }
 }
