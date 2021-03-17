@@ -2,7 +2,7 @@ resource "google_bigquery_dataset" "default" {
   dataset_id                  = var.config["friendly_name"]
   friendly_name               = var.config["friendly_name"]
   description                 = "This is a test description"
-  location                    =  var.config["source_format"]
+  location                    =  var.config["location"]
   default_table_expiration_ms = 3600000
 
   labels = {
