@@ -1,13 +1,13 @@
 resource "google_bigtable_instance" "production-instance" {
-  name = "tf-instance"
-
+  name = var.config["name"]
+  deletion_protection = false
   cluster {
-    cluster_id   = "tf-instance-cluster"
-    num_nodes    = 1
-    storage_type = "HDD"
+    cluster_id   = var.config["cluster_id"]
+    num_nodes    = var.config["num_nodes"]
+    storage_type = var.config["storage_type"]
   }
 
   labels = {
-    my-label = "prod-label"
+    my-label = var.config["my-label"]
   }
 }

@@ -4,10 +4,10 @@ variable "config" {
     project = "cache-307814"
     region  = "us-central1"
     zone    = "us-central1-c"
-
-    # friendly_name  = "test"
-    # location     = "EU"
-    # source_format = "GOOGLE_SHEETS"
-    # source_uris = "https://docs.google.com/spreadsheets/d/1sSXPgWFmSgiPnAab6Gvk4kkWA0q5woUVIMhVKmtJHwE/edit?usp=sharing"
+    name = "tf-instance"
+    cluster_id   = "tf-instance-cluster"
+    num_nodes = 1
+    storage_type = "HDD"
+    my-label = "prod-label"
   }
 }
