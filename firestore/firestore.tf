@@ -1,20 +1,6 @@
-resource "google_firestore_index" "index" {
-  project = "my-project-name"
-
-  collection = "chatrooms"
-
-  fields {
-    field_path = "Firstname"
-    order      = "ASCENDING"
-  }
-
-  fields {
-    field_path = "Lastname"
-    order      = "DESCENDING"
-  }
-
-  fields {
-    field_path = "Phone"
-    order      = "DESCENDING"
-  }
+resource "google_firestore_document" "mydoc" {
+  project     = "my-project-name"
+  collection  = "somenewcollection"
+  document_id = "my-doc"
+  fields      = "{\"something\":{\"mapValue\":{\"fields\":{\"akey\":{\"stringValue\":\"avalue\"}}}}}"
 }
