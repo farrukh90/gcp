@@ -6,7 +6,7 @@ resource "google_firestore_document" "mydoc" {
 }
 
 resource "google_firestore_index" "my-index" {
-  project = "my-project-name"
+  project = var.config["project"]
 
   collection = "chatrooms"
 
